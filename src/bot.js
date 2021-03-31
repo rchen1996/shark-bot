@@ -36,9 +36,11 @@ client.on('message', message => {
         .substring(PREFIX.length)
         .split(/\s+/);
 
-      // switch (CMD_NAME) {
-      //   case ''
-      // }
+      switch (CMD_NAME) {
+        case 'invite':
+          message.channel.send(process.env.INVITE_LINK);
+          break;
+      }
     }
   }
 });
