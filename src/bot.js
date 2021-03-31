@@ -10,6 +10,14 @@ client.on('ready', () => {
   console.log(`${client.user.tag} has logged in`);
 });
 
+client.on('guildMemberAdd', guildMember => {
+  if (guildMember.user.bot) {
+    guildMember.roles.add('826179978995564555');
+  } else {
+    guildMember.roles.add('826151754835951617');
+  }
+});
+
 client.on('message', message => {
   if (!message.author.bot) {
     console.log(`[${message.author.tag}]: ${message.content}`);
