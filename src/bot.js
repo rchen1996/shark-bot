@@ -26,6 +26,10 @@ client.on('message', message => {
       message.reply("don't forget to tell Siri to set a timer for 3 minutes!");
     }
 
+    if (message.content.toLowerCase().includes('good morning')) {
+      message.react(message.guild.emojis.cache.get('826936833128267796'));
+    }
+
     if (message.content.startsWith(PREFIX)) {
       const [CMD_NAME, ...args] = message.content
         .trim()
