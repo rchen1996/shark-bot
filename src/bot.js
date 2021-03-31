@@ -23,6 +23,10 @@ client.on('message', message => {
         .trim()
         .substring(PREFIX.length)
         .split(/\s+/);
+
+      // switch (CMD_NAME) {
+      //   case ''
+      // }
     }
   }
 });
