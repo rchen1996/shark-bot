@@ -10,9 +10,11 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-  console.log(`[${message.author.tag}]: ${message.content}`);
+  if (!message.author.bot) {
+    console.log(`[${message.author.tag}]: ${message.content}`);
 
-  if (message.content === 'tea time') {
-    message.reply("don't forget to tell Siri to set a timer for 3 minutes!");
+    if (message.content === 'tea time') {
+      message.reply("don't forget to tell Siri to set a timer for 3 minutes!");
+    }
   }
 });
